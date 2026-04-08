@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>华润电力 深度分析 — 巴菲特神谕分析师</title>
+<meta name="description" content="融合巴菲特投资哲学与现代多维分析框架的华润电力控股（0836.HK）深度分析报告">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════
+   Morandi Palette — Light & Dark Themes
+   ═══════════════════════════════════════ */
+
+:root {
+  /* ── Light Theme (Morandi warm) ── */
+  --bg: #F2EDE8;
+  --bg-alt: #EBE4DD;
+  --surface: #FFFFFF;
+  --surface-hover: #F9F6F3;
+  --border: #D8CFCA;
+  --border-accent: #C4A882;
+  --text: #4A433E;
+  --text-secondary: #7A726B;
+  --text-dim: #A09890;
+  --heading: #3A3330;
+
+  /* Morandi Accents */
+  --morandi-rose: #C9A9A0;
+  --morandi-sage: #A3B0A0;
+  --morandi-sand: #C4A882;
+  --morandi-blue: #9EB0BC;
+  --morandi-mauve: #B0A0B0;
+  --morandi-clay: #BEA898;
+  --morandi-olive: #A0A890;
+  --morandi-stone: #B0AAA0;
+
+  --accent: #8B7355;
+  --accent-light: rgba(139, 115, 85, 0.08);
+  --accent-border: rgba(139, 115, 85, 0.2);
+
+  /* Semantic */
+  --green: #7A9E7E;
+  --green-bg: rgba(122,158,126,0.1);
+  --red: #BF7B6E;
+  --red-bg: rgba(191,123,110,0.1);
+  --yellow: #C4A060;
+  --yellow-bg: rgba(196,160,96,0.1);
+  --blue: #7E9BB0;
+  --blue-bg: rgba(126,155,176,0.1);
+
+  /* Table */
+  --table-header-bg: #EDE7E1;
+  --table-stripe: rgba(0,0,0,0.02);
+  --table-hover: rgba(139,115,85,0.06);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(74,67,62,0.06);
+  --shadow-md: 0 4px 12px rgba(74,67,62,0.08);
+  --shadow-lg: 0 8px 32px rgba(74,67,62,0.1);
+
+  /* Badge */
+  --badge-buy-bg: rgba(122,158,126,0.15);
+  --badge-buy-text: #5A7E5E;
+  --badge-sell-bg: rgba(191,123,110,0.15);
+  --badge-sell-text: #9E5A4E;
+  --badge-hold-bg: rgba(196,160,96,0.15);
+  --badge-hold-text: #8E7030;
+
+  /* Layout */
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-lg: 16px;
+  --content-width: 900px;
+  --sidebar-width: 260px;
+}
+
+[data-theme="dark"] {
+  --bg: #262320;
+  --bg-alt: #2E2A27;
+  --surface: #33302D;
+  --surface-hover: #3B3734;
+  --border: #4A4540;
+  --border-accent: #8B7355;
+  --text: #E0D8D0;
+  --text-secondary: #B0A89E;
+  --text-dim: #807870;
+  --heading: #F0E8E0;
+
+  --accent: #C4A882;
+  --accent-light: rgba(196,168,130,0.1);
+  --accent-border: rgba(196,168,130,0.25);
+
+  --morandi-rose: #C9A9A0;
+  --morandi-sage: #8EA088;
+  --morandi-sand: #C4A882;
+  --morandi-blue: #8AA0B0;
+  --morandi-mauve: #A090A0;
+
+  --green: #8EB892;
+  --green-bg: rgba(142,184,146,0.12);
+  --red: #D08878;
+  --red-bg: rgba(208,136,120,0.12);
+  --yellow: #D4B070;
+  --yellow-bg: rgba(212,176,112,0.12);
+  --blue: #8EAEC0;
+  --blue-bg: rgba(142,174,192,0.12);
+
+  --table-header-bg: #3B3734;
+  --table-stripe: rgba(255,255,255,0.02);
+  --table-hover: rgba(196,168,130,0.08);
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.25);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.3);
+
+  --badge-buy-bg: rgba(142,184,146,0.18);
+  --badge-buy-text: #8EB892;
+  --badge-sell-bg: rgba(208,136,120,0.18);
+  --badge-sell-text: #D08878;
+  --badge-hold-bg: rgba(212,176,112,0.18);
+  --badge-hold-text: #D4B070;
+}
+
+/* ═══════════════════════════════
+   Base Reset & Typography
+   ═══════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.4s ease, color 0.3s ease;
+}
+
+/* ═══════════════════════════════
+   Top Navigation Bar
+   ═══════════════════════════════ */
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background 0.4s, border-color 0.3s;
+}
+
+[data-theme="light"] .topbar { background: rgba(255,255,255,0.9); }
+[data-theme="dark"] .topbar { background: rgba(51,48,45,0.9); }
+
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--heading);
+  text-decoration: none;
+}
+
+.topbar-brand .logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--morandi-sand), var(--morandi-rose));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topbar-meta {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-right: 12px;
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.25s;
+}
+
+.theme-toggle:hover {
+  background: var(--surface-hover);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ═══════════════════════════════
+   Layout: Sidebar + Content
+   ═══════════════════════════════ */
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 2rem 4rem;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  position: sticky;
+  top: 72px;
+  height: calc(100vh - 88px);
+  overflow-y: auto;
+  padding: 1rem 0;
+}
+
+.sidebar::-webkit-scrollbar { width: 3px; }
+.sidebar::-webkit-scrollbar-track { background: transparent; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+.sidebar-nav { list-style: none; }
+
+.sidebar-nav li {
+  margin-bottom: 2px;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  border-left: 2px solid transparent;
+  transition: all 0.2s;
+  line-height: 1.5;
+}
+
+.sidebar-nav a:hover {
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+.sidebar-nav a.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+  background: var(--accent-light);
+  font-weight: 500;
+}
+
+.sidebar-nav .nav-group {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  padding: 16px 12px 6px;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+  max-width: var(--content-width);
+}
+
+/* ═══════════════════════════════
+   Hero Section
+   ═══════════════════════════════ */
+
+.hero {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--morandi-sand), var(--morandi-rose), var(--morandi-sage), var(--morandi-blue));
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  background: var(--accent-light);
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  padding: 4px 14px;
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+  color: var(--heading);
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.hero-stat {
+  text-align: center;
+}
+
+.hero-stat .label {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.hero-stat .value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--heading);
+}
+
+.hero-stat .change {
+  font-size: 0.72rem;
+  margin-top: 2px;
+}
+
+.change.up { color: var(--green); }
+.change.down { color: var(--red); }
+
+/* ═══════════════════════════════
+   Verdict Card
+   ═══════════════════════════════ */
+
+.verdict {
+  background: linear-gradient(135deg, var(--surface), var(--bg-alt));
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.verdict::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--morandi-sand);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.verdict-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.verdict p {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.verdict strong {
+  color: var(--heading);
+}
+
+/* ═══════════════════════════════
+   Module Sections
+   ═══════════════════════════════ */
+
+.module {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s;
+}
+
+.module:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.module-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.module-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.module-num.n1 { background: rgba(201,169,160,0.2); color: var(--morandi-rose); }
+.module-num.n2 { background: rgba(163,176,160,0.2); color: var(--morandi-sage); }
+.module-num.n3 { background: rgba(196,168,130,0.2); color: var(--morandi-sand); }
+.module-num.n4 { background: rgba(158,176,188,0.2); color: var(--morandi-blue); }
+.module-num.n5 { background: rgba(176,160,176,0.2); color: var(--morandi-mauve); }
+.module-num.n6 { background: rgba(190,168,152,0.2); color: var(--morandi-clay); }
+.module-num.n7 { background: rgba(201,169,160,0.2); color: var(--morandi-rose); }
+.module-num.n8 { background: rgba(163,176,160,0.2); color: var(--morandi-sage); }
+.module-num.n9 { background: rgba(196,168,130,0.2); color: var(--morandi-sand); }
+.module-num.n10 { background: rgba(158,176,188,0.2); color: var(--morandi-blue); }
+.module-num.n11 { background: rgba(191,123,110,0.15); color: var(--red); }
+.module-num.n12 { background: rgba(196,168,130,0.2); color: var(--morandi-sand); }
+
+.module h2 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--heading);
+}
+
+.module h3 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--heading);
+  margin: 1.5rem 0 0.75rem;
+}
+
+.module h3:first-of-type {
+  margin-top: 0;
+}
+
+.module p, .module li {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.module ul, .module ol {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.module li {
+  margin-bottom: 0.3rem;
+}
+
+.module strong {
+  color: var(--heading);
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════
+   Tables
+   ═══════════════════════════════ */
+
+.table-wrapper {
+  overflow-x: auto;
+  margin: 1rem 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+thead {
+  background: var(--table-header-bg);
+}
+
+th {
+  padding: 10px 14px;
+  font-weight: 600;
+  color: var(--heading);
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 2px solid var(--border);
+  font-size: 0.78rem;
+}
+
+td {
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: top;
+}
+
+tr:nth-child(even) { background: var(--table-stripe); }
+tr:hover { background: var(--table-hover); }
+
+td:first-child { font-weight: 500; color: var(--heading); }
+
+/* Numeric cells */
+.num { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; text-align: right; }
+th.num { text-align: right; }
+
+/* ═══════════════════════════════
+   Special Elements
+   ═══════════════════════════════ */
+
+.callout {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  border-left: 3px solid;
+}
+
+.callout.info { background: var(--blue-bg); border-color: var(--blue); }
+.callout.success { background: var(--green-bg); border-color: var(--green); }
+.callout.warning { background: var(--yellow-bg); border-color: var(--yellow); }
+.callout.danger { background: var(--red-bg); border-color: var(--red); }
+
+.callout-title {
+  font-weight: 600;
+  color: var(--heading);
+  margin-bottom: 4px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.badge.buy { background: var(--badge-buy-bg); color: var(--badge-buy-text); }
+.badge.sell { background: var(--badge-sell-bg); color: var(--badge-sell-text); }
+.badge.hold { background: var(--badge-hold-bg); color: var(--badge-hold-text); }
+
+.rating-bar {
+  display: flex;
+  gap: 3px;
+  margin: 0.5rem 0;
+}
+
+.rating-bar .bar {
+  height: 6px;
+  border-radius: 3px;
+  flex: 1;
+  background: var(--border);
+  transition: background 0.3s;
+}
+
+.rating-bar .bar.filled { background: var(--morandi-sand); }
+
+.code-block {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  overflow-x: auto;
+  margin: 1rem 0;
+  color: var(--text);
+}
+
+.highlight-box {
+  background: var(--accent-light);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin: 1rem 0;
+}
+
+.highlight-box .hl-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Moat rating */
+.moat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.moat-item:last-child { border-bottom: none; }
+
+.moat-label { flex: 1; font-size: 0.85rem; font-weight: 500; color: var(--heading); }
+
+.moat-rating {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 999px;
+}
+
+.moat-rating.wide { background: var(--green-bg); color: var(--green); }
+.moat-rating.narrow { background: var(--yellow-bg); color: var(--yellow); }
+.moat-rating.none { background: var(--red-bg); color: var(--red); }
+
+/* ═══════════════════════════════
+   Scorecard
+   ═══════════════════════════════ */
+
+.scorecard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  margin: 1rem 0;
+}
+
+.score-row {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-alt);
+  gap: 12px;
+}
+
+.score-row .criteria {
+  flex: 1;
+  font-size: 0.82rem;
+  color: var(--text);
+}
+
+.score-row .score {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  min-width: 42px;
+  text-align: center;
+}
+
+.score-row .dots {
+  display: flex;
+  gap: 4px;
+}
+
+.score-row .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+.score-row .dot.filled { background: var(--morandi-sand); }
+
+/* Grade badge */
+.grade-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.grade-badge.a { background: var(--green-bg); color: var(--green); border: 2px solid var(--green); }
+.grade-badge.b { background: var(--blue-bg); color: var(--blue); border: 2px solid var(--blue); }
+.grade-badge.c { background: var(--yellow-bg); color: var(--yellow); border: 2px solid var(--yellow); }
+
+/* ═══════════════════════════════
+   Decision Box
+   ═══════════════════════════════ */
+
+.decision-box {
+  background: var(--surface);
+  border: 2px solid var(--green);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin: 1.5rem 0;
+}
+
+.decision-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.decision-rating {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: var(--radius);
+  background: var(--green-bg);
+  color: var(--green);
+}
+
+.decision-price {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.decision-price .current {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--heading);
+}
+
+.decision-price .target {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+/* ═══════════════════════════════
+   Disclaimer
+   ═══════════════════════════════ */
+
+.disclaimer {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+
+.disclaimer strong { color: var(--text-secondary); }
+
+/* ═══════════════════════════════
+   Footer
+   ═══════════════════════════════ */
+
+.page-footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+.page-footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.page-footer a:hover { text-decoration: underline; }
+
+/* ═══════════════════════════════
+   Back to top
+   ═══════════════════════════════ */
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s;
+  z-index: 100;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* ═══════════════════════════════
+   Responsive
+   ═══════════════════════════════ */
+
+@media (max-width: 960px) {
+  .sidebar { display: none; }
+  .layout { padding: 72px 1.25rem 3rem; }
+  .hero, .module { padding: 1.5rem; }
+}
+
+@media (max-width: 600px) {
+  .layout { padding: 64px 1rem 2rem; }
+  .hero { padding: 1.25rem; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .module { padding: 1.25rem; }
+  .topbar-meta { display: none; }
+  th, td { padding: 7px 10px; font-size: 0.75rem; }
+}
+
+/* ═══════════════════════════════
+   Print
+   ═══════════════════════════════ */
+@media print {
+  .topbar, .sidebar, .theme-toggle, .back-to-top { display: none !important; }
+  .layout { padding: 0; }
+  .module { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════ Top Bar ════════════ -->
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a href="#" class="topbar-brand">
+      <div class="logo">B</div>
+      <span>巴菲特神谕分析师</span>
+    </a>
+    <div class="topbar-actions">
+      <span class="topbar-meta">2026-04-08 | HKEX: 0836</span>
+      <button class="theme-toggle" id="themeToggle" title="切换主题" aria-label="Toggle theme">
+        <span id="themeIcon">&#9790;</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════════ Main Layout ════════════ -->
+<div class="layout">
+
+  <!-- ──── Sidebar ──── -->
+  <aside class="sidebar">
+    <ul class="sidebar-nav" id="sidebarNav">
+      <li class="nav-group">概览</li>
+      <li><a href="#verdict">巴菲特裁决</a></li>
+      <li><a href="#overview">公司概览</a></li>
+      <li class="nav-group">基本面</li>
+      <li><a href="#management">管理层评估</a></li>
+      <li><a href="#business">商业模式</a></li>
+      <li><a href="#moat">经济护城河</a></li>
+      <li><a href="#financials">财务分析</a></li>
+      <li><a href="#earningscall">电话会分析</a></li>
+      <li class="nav-group">估值与市场</li>
+      <li><a href="#valuation">多模型估值</a></li>
+      <li><a href="#competition">竞争分析</a></li>
+      <li><a href="#technical">技术面</a></li>
+      <li class="nav-group">风险与决策</li>
+      <li><a href="#catalysts">增长催化剂</a></li>
+      <li><a href="#risk">风险矩阵</a></li>
+      <li><a href="#scorecard">巴菲特计分卡</a></li>
+    </ul>
+  </aside>
+
+  <!-- ──── Content ──── -->
+  <main class="content">
+
+    <!-- ══ Hero ══ -->
+    <section class="hero" id="hero">
+      <div class="hero-badge">深度分析报告</div>
+      <h1>华润电力控股 China Resources Power</h1>
+      <p class="hero-subtitle">融合巴菲特投资哲学与现代多维分析框架的机构级深度研究</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="label">股价</div>
+          <div class="value">HK$18.19</div>
+        </div>
+        <div class="hero-stat">
+          <div class="label">市值</div>
+          <div class="value">HK$941亿</div>
+        </div>
+        <div class="hero-stat">
+          <div class="label">企业价值</div>
+          <div class="value">~HK$2,100亿</div>
+        </div>
+        <div class="hero-stat">
+          <div class="label">PE (TTM)</div>
+          <div class="value">6.5x</div>
+          <div class="change down">历史中位 ~14x</div>
+        </div>
+        <div class="hero-stat">
+          <div class="label">股息率</div>
+          <div class="value">5.7%</div>
+          <div class="change up">DPS HK$1.127</div>
+        </div>
+        <div class="hero-stat">
+          <div class="label">评级</div>
+          <div class="value" style="color:var(--green)">买入</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Verdict ══ -->
+    <section class="verdict" id="verdict">
+      <div class="verdict-title">巴菲特的裁决</div>
+      <p><strong>华润电力是一匹穿着公用事业外衣的"转型马"</strong>——它正在从一家传统火电公司变成中国最大的综合清洁能源集团之一，而市场只给了它6.5倍PE的价格。这家公司背靠华润集团（央企，持股64%），坐拥近9万兆瓦装机容量、火电和新能源各占一半。巴菲特一直说"买公用事业股要看两样东西：稳定的现金流和合理的价格"——华润电力两样都有，只是你需要接受它正在"花大钱建未来"的现实。</p>
+    </section>
+
+    <!-- ══ Module 1: Overview ══ -->
+    <section class="module" id="overview">
+      <div class="module-header">
+        <div class="module-num n1">01</div>
+        <h2>公司概览与背景</h2>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <tbody>
+            <tr><td>代码 / 交易所</td><td>0836 / 港交所</td></tr>
+            <tr><td>市值</td><td class="num">HK$941亿</td></tr>
+            <tr><td>行业</td><td>综合能源</td></tr>
+            <tr><td>成立时间</td><td>2001年（2003年上市）</td></tr>
+            <tr><td>总部</td><td>香港 / 深圳</td></tr>
+            <tr><td>52周价格区间</td><td class="num">HK$16.64 — HK$21.45</td></tr>
+            <tr><td>总装机容量</td><td class="num">89,647 MW</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>发展历程</h3>
+      <ul>
+        <li><strong>2001年</strong> — 华润集团整合旗下电力资产成立</li>
+        <li><strong>2003年</strong> — 港交所上市</li>
+        <li><strong>2021年</strong> — 煤价暴涨中少数未亏损火电公司</li>
+        <li><strong>2024年12月</strong> — 装机突破1亿千瓦</li>
+        <li><strong>2025年3月</strong> — 华润新能源A股IPO获深交所受理，拟募资245亿</li>
+        <li><strong>2025年底</strong> — 可再生能源装机占比达50%</li>
+      </ul>
+
+      <h3>股权结构</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>股东类型</th><th class="num">持股比例</th><th>说明</th></tr></thead>
+          <tbody>
+            <tr><td>华润集团</td><td class="num">~64%</td><td>央企控股</td></tr>
+            <tr><td>机构投资者</td><td class="num">~20%</td><td>国际及本地机构</td></tr>
+            <tr><td>公众</td><td class="num">~16%</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ══ Module 2: Management ══ -->
+    <section class="module" id="management">
+      <div class="module-header">
+        <div class="module-num n2">02</div>
+        <h2>管理层评估</h2>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>维度</th><th>评估</th><th class="num">评分</th></tr></thead>
+          <tbody>
+            <tr><td>资本配置能力</td><td>2021煤价危机独善其身，新能源扩张每年10GW节奏稳健</td><td class="num">B+</td></tr>
+            <tr><td>坦诚程度</td><td>央企稳健风格，信息披露规范但缺乏深度主动沟通</td><td class="num">B</td></tr>
+            <tr><td>利益绑定</td><td>央企管理层持股较少，但集团64%控股保障利益一致</td><td class="num">B-</td></tr>
+            <tr><td>历史记录</td><td>新能源50%目标如期达成，运营效率持续领先同行</td><td class="num">A-</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout info">
+        <div class="callout-title">央企管理层评价</div>
+        央企管理团队——不会让你兴奋，但也很少让你失望。
+      </div>
+    </section>
+
+    <!-- ══ Module 3: Business Model ══ -->
+    <section class="module" id="business">
+      <div class="module-header">
+        <div class="module-num n3">03</div>
+        <h2>商业模式深度解析</h2>
+      </div>
+
+      <div class="highlight-box">
+        <div class="hl-label">巴菲特的"一句话测试"</div>
+        <p><strong>华润电力建电厂发电卖给电网赚钱——一半烧煤，一半靠风和太阳。</strong></p>
+        <p style="margin-top:0.5rem;color:var(--green);font-size:0.82rem;font-weight:600">&#10003; 通过测试。模式清晰，一句话就能说明白。</p>
+      </div>
+
+      <h3>收入与利润结构</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>业务板块</th><th class="num">营收占比</th><th class="num">核心利润</th><th class="num">同比变化</th></tr></thead>
+          <tbody>
+            <tr><td>火电</td><td class="num">~55%</td><td class="num">HK$76.39亿</td><td class="num" style="color:var(--green)">+64.7%</td></tr>
+            <tr><td>可再生能源</td><td class="num">~35%</td><td class="num">HK$76.04亿</td><td class="num" style="color:var(--red)">-17.6%</td></tr>
+            <tr><td>煤炭</td><td class="num">~10%</td><td class="num">—</td><td class="num">—</td></tr>
+            <tr><td><strong>合计</strong></td><td class="num"><strong>HK$1,020亿</strong></td><td class="num"><strong>HK$152.43亿</strong></td><td class="num" style="color:var(--green)"><strong>+9.9%</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>装机结构</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>类型</th><th class="num">装机容量</th><th class="num">占比</th></tr></thead>
+          <tbody>
+            <tr><td>火电</td><td class="num">44,824 MW</td><td class="num">50%</td></tr>
+            <tr><td>风电</td><td class="num">~28,000 MW</td><td class="num">~31%</td></tr>
+            <tr><td>光伏</td><td class="num">~13,000 MW</td><td class="num">~15%</td></tr>
+            <tr><td>水电</td><td class="num">~3,800 MW</td><td class="num">~4%</td></tr>
+            <tr><td><strong>合计</strong></td><td class="num"><strong>89,647 MW</strong></td><td class="num"><strong>100%</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout success">
+        <div class="callout-title">历史性里程碑</div>
+        2025年底可再生能源占比正式达到50%——标志着华润电力从"火电为主"到"清洁能源为主"的转型完成。
+      </div>
+    </section>
+
+    <!-- ══ Module 4: Moat ══ -->
+    <section class="module" id="moat">
+      <div class="module-header">
+        <div class="module-num n4">04</div>
+        <h2>经济护城河分析</h2>
+      </div>
+
+      <div class="moat-item">
+        <div class="moat-label">网络效应</div>
+        <span class="moat-rating none">无</span>
+      </div>
+      <p style="font-size:0.82rem;color:var(--text-secondary);padding:4px 0 8px">发电行业不存在传统网络效应。</p>
+
+      <div class="moat-item">
+        <div class="moat-label">转换成本</div>
+        <span class="moat-rating wide">宽</span>
+      </div>
+      <p style="font-size:0.82rem;color:var(--text-secondary);padding:4px 0 8px">电厂接入电网后成为长期供电组成部分，生命周期20-30年，替换成本极高。</p>
+
+      <div class="moat-item">
+        <div class="moat-label">成本优势</div>
+        <span class="moat-rating wide">宽</span>
+      </div>
+      <p style="font-size:0.82rem;color:var(--text-secondary);padding:4px 0 8px">火电效率领先行业 + 央企低融资成本 + 规模化采购降低设备和燃料成本。</p>
+
+      <div class="moat-item">
+        <div class="moat-label">无形资产</div>
+        <span class="moat-rating wide">宽</span>
+      </div>
+      <p style="font-size:0.82rem;color:var(--text-secondary);padding:4px 0 8px">央企身份 = 优先获得发电指标、并网资格、优质风光资源。这是难以复制的制度性优势。</p>
+
+      <div class="moat-item">
+        <div class="moat-label">有效规模</div>
+        <span class="moat-rating wide">宽</span>
+      </div>
+      <p style="font-size:0.82rem;color:var(--text-secondary);padding:4px 0 8px">9万MW装机 + 高资本壁垒，新进入者难以达到同等规模。</p>
+
+      <div class="highlight-box" style="margin-top:1rem">
+        <div class="hl-label">护城河总评</div>
+        <p><strong style="color:var(--green);font-size:1rem">宽护城河</strong> — 趋势加宽中</p>
+        <p style="margin-top:0.5rem;font-size:0.85rem">央企身份 + 规模优势 + 清洁能源转型形成多层护城河。随着新能源占比提升和碳交易制度完善，护城河将持续加宽。</p>
+      </div>
+    </section>
+
+    <!-- ══ Module 5: Financials ══ -->
+    <section class="module" id="financials">
+      <div class="module-header">
+        <div class="module-num n5">05</div>
+        <h2>财务深度分析</h2>
+      </div>
+
+      <h3>年度利润表趋势（HK$百万）</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>指标</th><th class="num">FY2021</th><th class="num">FY2022</th><th class="num">FY2023</th><th class="num">FY2024</th><th class="num">FY2025</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>营收</td><td class="num">87,900</td><td class="num">95,700</td><td class="num">97,800</td><td class="num">105,300</td><td class="num">102,010</td></tr>
+            <tr><td>净利润</td><td class="num">3,200</td><td class="num">5,580</td><td class="num">10,990</td><td class="num">14,388</td><td class="num">14,519</td></tr>
+            <tr><td>EPS (HK$)</td><td class="num">0.66</td><td class="num">1.15</td><td class="num">2.27</td><td class="num">2.97</td><td class="num">2.80</td></tr>
+            <tr><td>DPS (HK$)</td><td class="num">0.30</td><td class="num">0.50</td><td class="num">0.91</td><td class="num">1.10</td><td class="num">1.127</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>利润率趋势</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>利润率</th><th class="num">FY2021</th><th class="num">FY2022</th><th class="num">FY2023</th><th class="num">FY2024</th><th class="num">FY2025</th><th>趋势</th></tr></thead>
+          <tbody>
+            <tr><td>毛利率</td><td class="num">4.5%</td><td class="num">12.1%</td><td class="num">18.8%</td><td class="num">18.6%</td><td class="num">19.3%</td><td style="color:var(--green)">&#8593; 持续改善</td></tr>
+            <tr><td>净利率</td><td class="num">3.6%</td><td class="num">5.8%</td><td class="num">11.2%</td><td class="num">13.7%</td><td class="num">14.2%</td><td style="color:var(--green)">&#8593; 持续改善</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>分部利润</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>板块</th><th class="num">核心利润</th><th class="num">同比变化</th></tr></thead>
+          <tbody>
+            <tr><td>火电</td><td class="num">HK$76.39亿</td><td class="num" style="color:var(--green)">+64.7%</td></tr>
+            <tr><td>可再生能源</td><td class="num">HK$76.04亿</td><td class="num" style="color:var(--red)">-17.6%</td></tr>
+            <tr><td><strong>合计</strong></td><td class="num"><strong>HK$152.43亿</strong></td><td class="num" style="color:var(--green)"><strong>+9.9%</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>资产负债表健康度</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>指标</th><th class="num">数值</th><th>评价</th></tr></thead>
+          <tbody>
+            <tr><td>总资产</td><td class="num">~HK$3,900亿</td><td>大型资产基础</td></tr>
+            <tr><td>有息负债率 (D/E)</td><td class="num">~155%</td><td style="color:var(--yellow)">&#9888;&#65039; 偏高</td></tr>
+            <tr><td>信用评级</td><td class="num">AAA</td><td style="color:var(--green)">&#10004; 最高等级</td></tr>
+            <tr><td>ROE</td><td class="num">~13%</td><td style="color:var(--green)">良好</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>现金流分析</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>指标</th><th class="num">数值</th><th>评价</th></tr></thead>
+          <tbody>
+            <tr><td>经营现金流</td><td class="num">~HK$322亿</td><td style="color:var(--green)">&#10004; 强劲</td></tr>
+            <tr><td>资本开支</td><td class="num">~HK$568亿</td><td style="color:var(--yellow)">&#9888;&#65039; 巨大</td></tr>
+            <tr><td>自由现金流 (FCF)</td><td class="num">~-HK$246亿</td><td style="color:var(--red)">&#10008; 负值</td></tr>
+            <tr><td>OCF / 净利润</td><td class="num">~222%</td><td style="color:var(--green)">&#10004; 优秀的现金转化</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>所有者盈余计算</h3>
+      <div class="code-block">净利润                           HK$145亿
++ 折旧与摊销                      ~HK$200亿
+- 维护性资本开支（估算）            ~HK$100亿
+─────────────────────────────────────────
+所有者盈余 ≈                       ~HK$245亿
+
+收益率 = 245 / 941 = 26.0%</div>
+
+      <h3>杜邦分析（ROE拆解）</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>组成部分</th><th class="num">数值</th><th>说明</th></tr></thead>
+          <tbody>
+            <tr><td>净利率</td><td class="num">14.2%</td><td>盈利能力持续改善</td></tr>
+            <tr><td>资产周转率</td><td class="num">0.26x</td><td>重资产行业特征</td></tr>
+            <tr><td>财务杠杆</td><td class="num">3.5x</td><td>高杠杆经营，需关注</td></tr>
+            <tr><td><strong>ROE</strong></td><td class="num"><strong>~13%</strong></td><td>杠杆驱动型ROE，高于行业平均</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout warning">
+        <div class="callout-title">关键信号</div>
+        自由现金流深度为负——不是因为生意不赚钱，而是公司在"花大钱建未来"。每年10GW的新能源装机需要巨额资本开支，但经营现金流对净利润的覆盖率高达222%，说明核心业务造血能力极强。
+      </div>
+    </section>
+
+    <!-- ══ Module 6: Earnings Call ══ -->
+    <section class="module" id="earningscall">
+      <div class="module-header">
+        <div class="module-num n6">06</div>
+        <h2>电话会分析</h2>
+      </div>
+
+      <h3>FY2025业绩发布核心信息</h3>
+      <ol>
+        <li><strong>火电盈利大幅修复</strong> — 煤价同比下降12.3%，推动火电核心利润同比增长+64.7%</li>
+        <li><strong>新能源50%里程碑达成</strong> — 可再生能源装机占比正式达到50%，完成历史性转型目标</li>
+        <li><strong>华润新能源A股IPO推进中</strong> — 拟募资245亿元人民币，已获深交所受理</li>
+        <li><strong>全年DPS HK$1.127</strong> — 派息率40.2%，股东回报持续提升</li>
+      </ol>
+
+      <div class="callout info" style="margin-top:1rem">
+        <div class="callout-title">前瞻指引</div>
+        2026年多省电价面临下行压力，管理层表示容量电价机制提供保护。容量电价将成为火电盈利稳定性的重要支撑。
+      </div>
+
+      <h3>前期电话会对比</h3>
+      <ul>
+        <li><strong>FY2023</strong>：煤价高位回落，火电利润开始修复</li>
+        <li><strong>FY2024</strong>：新能源装机加速，全年新增超10GW</li>
+        <li><strong>FY2025</strong>：火电+新能源双轮驱动，利润结构更加均衡</li>
+      </ul>
+    </section>
+
+    <!-- ══ Module 7: Valuation ══ -->
+    <section class="module" id="valuation">
+      <div class="module-header">
+        <div class="module-num n7">07</div>
+        <h2>多模型估值</h2>
+      </div>
+
+      <h3>1. 相对估值</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>指标</th><th class="num">华润电力</th><th class="num">华能国际</th><th class="num">中国电力</th><th class="num">华润5年均值</th></tr></thead>
+          <tbody>
+            <tr><td>PE (TTM)</td><td class="num">6.5x</td><td class="num">8x</td><td class="num">7x</td><td class="num">14x</td></tr>
+            <tr><td>PB</td><td class="num">0.95x</td><td class="num">0.7x</td><td class="num">0.8x</td><td class="num">1.2x</td></tr>
+            <tr><td>EV/EBITDA</td><td class="num">5-6x</td><td class="num">6x</td><td class="num">5x</td><td class="num">7x</td></tr>
+            <tr><td>股息率</td><td class="num" style="color:var(--green)">5.7%</td><td class="num">5%</td><td class="num">4.5%</td><td class="num">4%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>2. DCF（现金流折现）</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>情景</th><th class="num">内在价值/股</th><th class="num">vs 现价</th></tr></thead>
+          <tbody>
+            <tr><td>悲观</td><td class="num">HK$17</td><td class="num" style="color:var(--red)">-7%</td></tr>
+            <tr><td><strong>基准</strong></td><td class="num"><strong>HK$23</strong></td><td class="num" style="color:var(--green)"><strong>+26%</strong></td></tr>
+            <tr><td>乐观</td><td class="num">HK$30</td><td class="num" style="color:var(--green)">+65%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>3. DDM（股利折现模型）</h3>
+      <div class="highlight-box">
+        <div class="hl-label">DDM计算（最适用于公用事业）</div>
+        <p style="font-size:0.88rem">DPS HK$1.127 &divide; (要求回报8% - 增长4%) = <strong style="font-size:1.1rem;color:var(--heading)">HK$29.30</strong></p>
+        <p style="margin-top:0.5rem;font-size:0.85rem">保守假设（3%增长 / 9%要求回报）= <strong>HK$19.35</strong></p>
+      </div>
+
+      <h3>4. SOTP（分部加总估值）</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>业务板块</th><th>估值方法</th><th class="num">估值（HK$亿）</th></tr></thead>
+          <tbody>
+            <tr><td>火电</td><td>8x核心利润</td><td class="num">611</td></tr>
+            <tr><td>新能源</td><td>15x核心利润</td><td class="num">1,141</td></tr>
+            <tr><td>煤矿</td><td>资产价值</td><td class="num">50</td></tr>
+            <tr><td><strong>SOTP总计</strong></td><td></td><td class="num"><strong>1,802</strong></td></tr>
+            <tr><td>集团折价后 (85%)</td><td></td><td class="num"><strong>1,532</strong></td></tr>
+            <tr><td><strong>每股价值</strong></td><td></td><td class="num"><strong>~HK$29.6</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>估值汇总表</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>估值方法</th><th class="num">合理价值/股</th></tr></thead>
+          <tbody>
+            <tr><td>相对估值</td><td class="num">HK$20 — 25</td></tr>
+            <tr><td>DCF基准</td><td class="num">HK$23</td></tr>
+            <tr><td>DDM（最适用）</td><td class="num">HK$29</td></tr>
+            <tr><td>PEG</td><td class="num">低估</td></tr>
+            <tr><td>NAV</td><td class="num">HK$22</td></tr>
+            <tr><td>SOTP</td><td class="num">HK$30</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="highlight-box">
+        <div class="hl-label">加权合理价值</div>
+        <p style="font-size:1.3rem;font-weight:700;color:var(--heading);font-family:'JetBrains Mono',monospace">HK$22 — 28 / 股（中位 ~HK$25）</p>
+        <p style="margin-top:0.5rem;font-size:0.85rem">当前价HK$18.19 &rarr; <strong style="color:var(--green)">安全边际约 17-35%</strong></p>
+      </div>
+
+      <div class="callout warning">
+        <div class="callout-title">反向DCF：市场在定价什么？</div>
+        当前股价隐含的永续增长率仅~2%，市场假设分红几乎不增长——这对于一家新能源装机每年增长10GW+的公司来说，过于悲观。
+      </div>
+    </section>
+
+    <!-- ══ Module 8: Competition ══ -->
+    <section class="module" id="competition">
+      <div class="module-header">
+        <div class="module-num n8">08</div>
+        <h2>竞争与行业分析</h2>
+      </div>
+
+      <h3>中国电力行业梯队划分</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>梯队</th><th>代表企业</th><th class="num">装机规模</th><th>特点</th></tr></thead>
+          <tbody>
+            <tr><td>第一梯队</td><td>华能、国电</td><td class="num">&gt;150GW</td><td>规模最大，全国布局</td></tr>
+            <tr><td>第二梯队</td><td>大唐、华电</td><td class="num">100-150GW</td><td>规模较大，转型中</td></tr>
+            <tr><td>第三梯队</td><td><strong>华润电力</strong>、中国电力</td><td class="num">&lt;100GW</td><td>规模相对小但利润率领先</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>核心竞争者对比</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>指标</th><th class="num">华润电力</th><th class="num">华能国际</th><th class="num">中国电力</th><th class="num">龙源电力</th></tr></thead>
+          <tbody>
+            <tr><td>总装机</td><td class="num">89.6GW</td><td class="num">~140GW</td><td class="num">~50GW</td><td class="num">~35GW</td></tr>
+            <tr><td>新能源占比</td><td class="num" style="color:var(--green)">50%</td><td class="num">25%</td><td class="num">55%</td><td class="num">100%</td></tr>
+            <tr><td>PE</td><td class="num" style="color:var(--green)">6.5x</td><td class="num">8x</td><td class="num">7x</td><td class="num">12x</td></tr>
+            <tr><td>股息率</td><td class="num" style="color:var(--green)">5.7%</td><td class="num">5%</td><td class="num">4.5%</td><td class="num">2.5%</td></tr>
+            <tr><td>ROE</td><td class="num" style="color:var(--green)">13%</td><td class="num">8%</td><td class="num">10%</td><td class="num">10%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>波特五力分析</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>力量</th><th>强度</th><th>分析</th></tr></thead>
+          <tbody>
+            <tr><td>供应商议价力</td><td style="color:var(--yellow)">中等</td><td>煤炭供应市场化，长协机制提供一定保护</td></tr>
+            <tr><td>买方议价力</td><td style="color:var(--red)">高 &#9888;&#65039;</td><td>电网是唯一买家，定价权受限</td></tr>
+            <tr><td>替代品威胁</td><td style="color:var(--yellow)">中等</td><td>分布式光伏、储能等新技术逐步渗透</td></tr>
+            <tr><td>新进入者威胁</td><td style="color:var(--green)">低 &#10004;</td><td>高资本壁垒 + 牌照门槛 + 并网审批</td></tr>
+            <tr><td>行业内竞争</td><td style="color:var(--yellow)">中等</td><td>央企之间良性竞争，价格战有限</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ══ Module 9: Technical ══ -->
+    <section class="module" id="technical">
+      <div class="module-header">
+        <div class="module-num n9">09</div>
+        <h2>技术面分析</h2>
+      </div>
+
+      <div class="callout info">
+        <div class="callout-title">注意</div>
+        巴菲特本人不使用技术分析。本节作为完整性补充，供交易型投资者参考。
+      </div>
+
+      <h3>关键支撑与阻力位</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>类型</th><th class="num">价位</th><th>依据</th></tr></thead>
+          <tbody>
+            <tr><td style="color:var(--green)">强支撑</td><td class="num">HK$16.60</td><td>52周最低点</td></tr>
+            <tr><td style="color:var(--green)">支撑1</td><td class="num">HK$17.00</td><td>前期整理平台下沿</td></tr>
+            <tr><td style="color:var(--green)">支撑2</td><td class="num">HK$17.50</td><td>近期密集成交区</td></tr>
+            <tr><td style="color:var(--red)">阻力1</td><td class="num">HK$19.00</td><td>前期平台压力位</td></tr>
+            <tr><td style="color:var(--red)">阻力2</td><td class="num">HK$20.00</td><td>心理整数位 + 均线压制</td></tr>
+            <tr><td style="color:var(--red)">强阻力</td><td class="num">HK$21.00 — 21.50</td><td>52周高点区域</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>技术指标总结</h3>
+      <p>股价处于HK$17-20宽幅震荡区间，整体温和下行通道。当前HK$18.19位于区间中下部，距离下方强支撑约9%，距离上方强阻力约18%。</p>
+    </section>
+
+    <!-- ══ Module 10: Catalysts ══ -->
+    <section class="module" id="catalysts">
+      <div class="module-header">
+        <div class="module-num n10">10</div>
+        <h2>增长催化剂与前景展望</h2>
+      </div>
+
+      <h3>短期催化剂（未来6-12个月）</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>催化剂</th><th>时间</th><th>影响方向</th></tr></thead>
+          <tbody>
+            <tr><td>华润新能源A股IPO</td><td>2026年内</td><td style="color:var(--green)">重大利好——释放新能源板块估值</td></tr>
+            <tr><td>中期业绩</td><td>2026年8月</td><td>验证火电+新能源双轮驱动</td></tr>
+            <tr><td>煤价走势</td><td>持续中</td><td style="color:var(--green)">煤价下行利好火电利润</td></tr>
+            <tr><td>容量电价机制</td><td>2026年</td><td style="color:var(--green)">为火电提供盈利底线保障</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>长期增长驱动力（3-5年）</h3>
+      <ol>
+        <li><strong>每年10GW+新增新能源装机</strong> — 持续扩大清洁能源版图</li>
+        <li><strong>容量电价机制</strong> — 为火电提供底部保障，平滑业绩波动</li>
+        <li><strong>电力市场化改革</strong> — 利好优质运营商获得更高电价</li>
+        <li><strong>华润新能源A股上市</strong> — 打通新能源业务独立融资渠道，降低母公司杠杆</li>
+      </ol>
+    </section>
+
+    <!-- ══ Module 11: Risk ══ -->
+    <section class="module" id="risk">
+      <div class="module-header">
+        <div class="module-num n11">11</div>
+        <h2>风险矩阵</h2>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>风险类型</th><th class="num">评分(1-5)</th><th>具体风险</th></tr></thead>
+          <tbody>
+            <tr><td>经营风险</td><td class="num">2</td><td>运营成熟稳健，新能源建设进度风险可控</td></tr>
+            <tr><td>财务风险</td><td class="num" style="color:var(--yellow)">3</td><td>D/E ~155%，资本开支巨大导致负自由现金流</td></tr>
+            <tr><td>竞争风险</td><td class="num">2</td><td>央企间良性竞争，行业格局相对稳定</td></tr>
+            <tr><td>监管/政策风险</td><td class="num" style="color:var(--red)">4 &#9888;&#65039;</td><td>电价改革是最大不确定性——多省面临电价下行压力</td></tr>
+            <tr><td>宏观风险</td><td class="num">3</td><td>用电需求与GDP增速正相关，经济放缓影响发电量</td></tr>
+            <tr><td>估值风险</td><td class="num" style="color:var(--green)">1 &#10004;</td><td>PE仅6.5x，估值已极度压缩，下行空间有限</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout danger" style="margin-top:1rem">
+        <div class="callout-title">黑天鹅情景</div>
+        <strong>最坏情况：</strong>电价大幅下调15% + 煤价暴涨 + 弃风弃光恶化 &rarr; 净利润下降30-40%至HK$90亿，股价可能跌至HK$13-14。<strong>但央企背景保障不会出现流动性危机。</strong>
+      </div>
+    </section>
+
+    <!-- ══ Module 12: Scorecard ══ -->
+    <section class="module" id="scorecard">
+      <div class="module-header">
+        <div class="module-num n12">12</div>
+        <h2>巴菲特计分卡与投资决策</h2>
+      </div>
+
+      <h3>巴菲特计分卡（满分36分）</h3>
+      <div class="scorecard-grid">
+        <div class="score-row"><span class="criteria">业务是否易于理解</span><div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div></div><span class="score">3/3</span></div>
+        <div class="score-row"><span class="criteria">经营历史是否一致</span><div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div></div><span class="score">3/3</span></div>
+        <div class="score-row"><span class="criteria">长期前景是否良好</span><div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div></div><span class="score">3/3</span></div>
+        <div class="score-row"><span class="criteria">管理层坦诚与理性</span><div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div><span class="score">2/3</span></div>
+        <div class="score-row"><span class="criteria">主人翁经营心态</span><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div><span class="score">1/3</span></div>
+        <div class="score-row"><span class="criteria">高ROE低负债</span><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div><span class="score">1/3</span></div>
+        <div class="score-row"><span class="criteria">强劲自由现金流</span><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div><span class="score">1/3</span></div>
+        <div class="score-row"><span class="criteria">宽广经济护城河</span><div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div></div><span class="score">3/3</span></div>
+        <div class="score-row"><span class="criteria">保守会计处理</span><div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div><span class="score">2/3</span></div>
+        <div class="score-row"><span class="criteria">存在安全边际</span><div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div><span class="score">2/3</span></div>
+        <div class="score-row"><span class="criteria">定价能力（抗通胀）</span><div class="dots"><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div><span class="score">1/3</span></div>
+        <div class="score-row"><span class="criteria">低资本再投入需求</span><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div><span class="score">0/3</span></div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:16px;margin:1.5rem 0;padding:1rem;background:var(--bg-alt);border-radius:var(--radius)">
+        <div class="grade-badge c">C+</div>
+        <div>
+          <div style="font-weight:700;color:var(--heading);font-size:1.1rem">总分 22/36 — 合格公司</div>
+          <div style="font-size:0.82rem;color:var(--text-secondary)">A(30-36) 杰出 &middot; B(24-29) 优秀 &middot; C(18-23) 一般 &middot; D(12-17) 令人担忧</div>
+        </div>
+      </div>
+
+      <!-- ── Investment Decision ── -->
+      <h3>投资决策</h3>
+
+      <div class="decision-box">
+        <div class="decision-header">
+          <div class="decision-rating">买入</div>
+          <div class="decision-price">
+            <div class="current">HK$18.19</div>
+            <div class="target">加权目标价 <strong>HK$20.25</strong> &nbsp; | &nbsp; 潜在回报 <strong style="color:var(--green)">+11.3% + 6.2%股息 = ~17.5%总回报</strong></div>
+          </div>
+        </div>
+
+        <h3>12个月目标价</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>情景</th><th class="num">目标价</th><th class="num">概率</th><th>逻辑</th></tr></thead>
+            <tbody>
+              <tr><td>乐观</td><td class="num" style="color:var(--green)">HK$24</td><td class="num">25%</td><td>新能源IPO成功 + 煤价持续走低 + 电改利好</td></tr>
+              <tr><td><strong>基准</strong></td><td class="num"><strong>HK$21</strong></td><td class="num"><strong>50%</strong></td><td>业绩平稳 + 估值从极度低估回归合理</td></tr>
+              <tr><td>悲观</td><td class="num" style="color:var(--red)">HK$15</td><td class="num">25%</td><td>电价大幅下调 + 煤价反弹 + 弃风弃光恶化</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>分批建仓策略</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>建仓</th><th class="num">价位</th><th class="num">仓位占比</th></tr></thead>
+            <tbody>
+              <tr><td>首仓</td><td class="num">HK$17.5 — 18.5（当前区间）</td><td class="num">40%</td></tr>
+              <tr><td>二仓</td><td class="num">HK$16.0 — 17.0（接近52周低点）</td><td class="num">35%</td></tr>
+              <tr><td>三仓</td><td class="num">HK$14.5 — 15.5（黑天鹅加仓位）</td><td class="num">25%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>止盈止损策略</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>操作</th><th class="num">价位</th><th>说明</th></tr></thead>
+            <tbody>
+              <tr><td style="color:var(--green)">第一档止盈</td><td class="num">HK$21 — 22</td><td>减仓1/3，锁定利润</td></tr>
+              <tr><td style="color:var(--green)">第二档止盈</td><td class="num">HK$24 — 25</td><td>再减1/3</td></tr>
+              <tr><td>核心仓位</td><td class="num">长期持有</td><td>核心持有长期收息</td></tr>
+              <tr><td style="color:var(--red)">止损位</td><td class="num">HK$14</td><td>买入均价下方约20%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>仓位管理</h3>
+        <ul>
+          <li><strong>建议仓位：</strong>占投资组合的5-8%（公用事业类可适当重仓）</li>
+          <li><strong>建议持有周期：</strong>长期持有（3年+）</li>
+          <li><strong>适合投资者：</strong>追求稳定股息收益、看好中国清洁能源转型的中长线投资者</li>
+        </ul>
+
+        <h3>关键监控指标</h3>
+        <ol>
+          <li>上网电价变化（尤其是市场化交易电价）</li>
+          <li>煤炭长协价走势</li>
+          <li>新能源装机进度（年度10GW+目标）</li>
+          <li>弃风弃光率变化</li>
+          <li>华润新能源A股IPO进展</li>
+          <li>季度发电量（火电+新能源利用小时数）</li>
+          <li>负债率趋势</li>
+        </ol>
+
+        <h3>事件时间表</h3>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>时间</th><th>事件</th></tr></thead>
+            <tbody>
+              <tr><td>2026年内</td><td>华润新能源A股IPO（最重大催化剂）</td></tr>
+              <tr><td>2026年5-6月</td><td>末期股息派发</td></tr>
+              <tr><td>2026年8月</td><td>中期业绩发布</td></tr>
+              <tr><td>2026年持续</td><td>电力市场化改革政策推进</td></tr>
+              <tr><td>2027年3月</td><td>FY2026全年业绩</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ══ Disclaimer ══ -->
+    <div class="disclaimer">
+      <strong>免责声明：</strong>本分析仅供教育和研究用途，不构成投资建议。"巴菲特"视角是一个受沃伦·巴菲特公开表述的投资原则启发的分析框架——它并不代表沃伦·巴菲特本人对任何具体公司的观点。所有投资都有风险，请在做出投资决策前咨询合格的财务顾问。
+    </div>
+
+    <!-- ══ Footer ══ -->
+    <footer class="page-footer">
+      <p>Generated by <strong>巴菲特神谕分析师</strong> &middot; <a href="https://github.com/JaceXie" target="_blank" rel="noopener">@JaceXie</a></p>
+      <p style="margin-top:4px">分析日期：2026-04-08 &middot; 港交所：0836.HK</p>
+    </footer>
+
+  </main>
+</div>
+
+<!-- ══ Back to Top ══ -->
+<button class="back-to-top" id="backToTop" title="回到顶部" aria-label="Back to top">&#8593;</button>
+
+<!-- ═══════════════════════════════
+     Scripts
+     ═══════════════════════════════ -->
+<script>
+(function() {
+  // ── Theme Toggle ──
+  const html = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const icon = document.getElementById('themeIcon');
+
+  const saved = localStorage.getItem('cr-power-theme');
+  if (saved) {
+    html.setAttribute('data-theme', saved);
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    html.setAttribute('data-theme', 'dark');
+  }
+
+  function updateIcon() {
+    icon.innerHTML = html.getAttribute('data-theme') === 'dark' ? '&#9788;' : '&#9790;';
+  }
+  updateIcon();
+
+  toggle.addEventListener('click', function() {
+    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('cr-power-theme', next);
+    updateIcon();
+  });
+
+  // ── Sidebar Active State ──
+  const sections = document.querySelectorAll('.module, .verdict, .hero');
+  const navLinks = document.querySelectorAll('.sidebar-nav a');
+
+  function updateActive() {
+    let current = '';
+    sections.forEach(function(section) {
+      const top = section.offsetTop - 100;
+      if (window.scrollY >= top) {
+        current = section.id;
+      }
+    });
+    navLinks.forEach(function(link) {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
+
+  // ── Back to Top ──
+  var btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', function() {
+    btn.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ── Smooth scroll for sidebar ──
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+})();
+</script>
+</body>
+</html>
